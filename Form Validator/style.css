@@ -1,0 +1,113 @@
+*{
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: dark light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --blue: #2078C6;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#card {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #FFFFFF; 
+  box-shadow: 0 0 9px 0px #cacaca;
+  border-radius: .25rem;
+}
+
+h1 {
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 3rem;
+  margin-inline: 3rem;
+}
+
+.field{
+  margin-block-end: 2rem;
+}
+
+.field > label {
+  display: block;
+  margin-block-end: 0.25rem;
+  color: #6b6b6b;
+}
+
+.field > input {
+  width: 100%;
+  padding: 0.5rem;
+
+  border-radius: 0.25rem;
+  border: 2px solid #F3F3F3;
+
+  color: #3F3F3F;
+}
+
+.field > input:focus-visible {
+  outline-color: var(--blue);
+}
+
+button {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--blue);
+  color: #F3F3F3;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    /*background-color: #f9f9f9;*/
+  }
+}
