@@ -1,34 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --background-color: #242424;
-  --color: rgba(255, 255, 255, 0.87);
-  --card-bg-color: var(--background-color);
-  /* --button-bg-color: #4f4f4f; */
-  /* --label-color: #6b6b6b; */
-  --label-color: var(--color);
-  --highlight: #2078c6;
-  --disabled: var(--background-color);
-  --disabled-text: #717171;
-  /* --highlight: #2078C6; */
-
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: dark light;
-  color: var(--color);
-  background-color: var(--background-color);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+@import url('/css/base.css');
 
 body {
   margin: 0;
@@ -43,7 +13,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--card-bg-color);
+  background-color: var(--background-color);
   border-radius: 0.25rem;
 }
 
@@ -86,7 +56,7 @@ h1 {
 .field > label {
   display: block;
   margin-block-end: 0.25rem;
-  color: var(--label-color);
+  color: var(--color);
 }
 
 .field > input {
@@ -156,13 +126,6 @@ button:disabled {
   background: var(--disabled);
   color: var(--disabled-text);
   cursor: default;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: #ffffff;
-    --color: #213547;
-  }
 }
 
 @keyframes rainbow {
