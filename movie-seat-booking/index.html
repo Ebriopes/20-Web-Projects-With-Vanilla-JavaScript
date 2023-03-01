@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie seat booking</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>
+          <span>Pick a movie: </span>
+          <select name="movie" id="movie">
+            <option disabled selected hidden value="">Choose an option</option>
+          </select>
+        </article>
+        <article id="seat-label">
+          <span class="seat">N/A</span>
+          <span class="seat selected">Selected</span>
+          <span class="seat occupied">Occupied</span>
+        </article>
+      </section>
+      <section>
+        <div id="screen"></div>
+
+        <table id="seats">
+          <tr data-row="1">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+          <tr data-row="2">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+          <tr data-row="3">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+          <tr data-row="4">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+          <tr data-row="5">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+          <tr data-row="6">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+          <tr data-row="7">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+          <tr data-row="8">
+            <td data-column="1" class="seat"></td>
+            <td data-column="2" class="seat"></td>
+            <td></td>
+            <td data-column="3" class="seat"></td>
+            <td data-column="4" class="seat"></td>
+            <td data-column="5" class="seat"></td>
+            <td data-column="6" class="seat"></td>
+            <td></td>
+            <td data-column="7" class="seat"></td>
+            <td data-column="8" class="seat"></td>
+          </tr>
+        </table>
+        <span>
+          You have selected
+          <b id="seats-selected"> 0 </b>
+          seats for a price of
+          <b id="amount-total"> $0 </b>
+        </span>
+      </section>
+    </main>
+    <script type="module" src="./seat-booking.js"></script>
+  </body>
+</html>
