@@ -1,0 +1,135 @@
+@import url('/css/base.css');
+
+:root {
+  --max-width: 90vw;
+  --max-height: 70vh;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main > h1 {
+  text-align: center;
+}
+
+.player {
+  position: relative;
+  max-width: var(--max-width);
+  max-height: var(--max-height);
+  overflow: hidden;
+}
+.player::after {
+  /* content: 'II'; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: xxx-large;
+  font-weight: 900;
+  text-shadow: 2px 2px 5px #000, -2px -2px 5px #000, 0 0 10px #fff,
+    0 0 15px #000;
+}
+
+#video {
+  max-width: var(--max-width);
+  max-height: var(--max-height);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#controls {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(2rem);
+  transition: opacity 750ms ease-in-out;
+}
+#video:hover + #controls,
+#video + #controls:hover {
+  opacity: 1;
+}
+
+.play-pause {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border: 2px outset #ffffff;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  /* transition:  1s ease; */
+}
+.play-pause:active {
+  border-style: inset;
+}
+
+.timer {
+  position: relative;
+  flex: 5;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.timer > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 100%;
+  border-radius: 5px;
+  background-color: teal;
+  transition: all 250ms linear;
+}
+.timer > span {
+  position: relative;
+  margin-left: 8px;
+  z-index: 3;
+}
+
+.volume {
+  position: relative;
+}
+
+.volume-button {
+  border: none;
+  background: none;
+}
+
+.volume > input {
+  position: absolute;
+  left: calc(50% - 2px);
+  top: -1rem;
+  opacity: 0;
+  visibility: hidden;
+
+  -webkit-appearance: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  background-image: linear-gradient(teal, teal);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(1rem);
+
+  transform-origin: left;
+  transform: rotate(-90deg);
+  transition: visibility 500ms ease, opacity 1s ease;
+}
+.volume :is(.volume-button:hover + input, input:hover) {
+  opacity: 1;
+  visibility: visible;
+}

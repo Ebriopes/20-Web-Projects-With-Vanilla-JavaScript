@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/vite.svg" type="image/x-icon" />
+    <title>Custom Video Player</title>
+  </head>
+  <body>
+    <main>
+      <h1>Custom Video Player</h1>
+
+      <div class="player">
+        <video id="video" poster="./Play-Button-Transparent.png" controls>
+          <source src="./video.mp4" />
+        </video>
+        <div id="controls">
+          <button class="play-pause">
+            <box-icon name="pause"></box-icon>
+          </button>
+          <div class="timer">
+            <div></div>
+            <span aria-label="timer">00:00</span>
+          </div>
+          <div class="volume">
+            <button class="volume-button">
+              <box-icon type="solid" name="volume-full"></box-icon>
+            </button>
+            <input type="range" min="0" max="1" step="0.05" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./video.js"></script>
+  </body>
+</html>
